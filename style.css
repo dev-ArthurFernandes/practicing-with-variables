@@ -1,0 +1,42 @@
+body {
+    width: 1920px;
+    height: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FF3CAC;
+    background-image: linear-gradient(225deg, #ac8e92 0%, #a1a187 50%, #899970 100%);
+    background-size: 300% 300%;
+    animation: colors 15s ease infinite;
+}
+
+@keyframes colors {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    font-size: 20pt;
+    font-family: 'Open Sans', sans-serif;
+    color:black;
+    width: 700px;
+    height: 330px;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.container strong {
+    color: orangered;
+    font-family: 'Roboto Mono', monospace;
+}
