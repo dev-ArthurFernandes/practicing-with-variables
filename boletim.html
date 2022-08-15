@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="script/media.js"></script>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/style2.css">
+    <title>Boletim</title>
+    <link rel="shortcut icon" href="img/logo-favicon.png" type="image/x-icon">
+</head>
+<body oninput="calcular_medias_do_aluno()">
+     <header class="titulo_pagina">
+
+          <img src="img/logo.png" alt="logo_kenzie" id="imagem_header">
+
+          <div class="aluno">
+               <span id="aluno">
+                    <p>ALUNO:</p>
+                    <input type="text" id="nome_do_aluno" name="nome_do_aluno" placeholder="Coloque o nome do aluno...">
+                    <div class="busca">
+                         <button type="submit" onclick="buscar_aluno()">BUSCAR</button>
+                    </div>
+               </span>
+               
+               <span id="matricula">
+                    <p>MATRICULA:</p>
+                    <input type="text" id="matricula_do_aluno" readonly>
+               </span>
+               <span id="ID">
+                    <p>ID:</p>
+                    <input type="text" id="id_do_aluno" name="id_do_aluno" readonly> 
+               </span>
+          </div>
+          
+          
+
+          <div class="uso">
+               <h2>NOTA DE USO</h2>
+               <p>Para o uso do boletim insira o nome do aluno no campo "ALUNO" e em seguida clique no botão "BUSCAR", logo insira as notas do aluno nos respectivos lugares, para avaliar se o aluno foi ou não aprovado, clique no botão "AVALIAR".</p>
+          </div>
+     </header>
+     <div class="container2">
+          
+          <div class="importante">
+               nota máxima: 10
+               presença máxima: 50
+          </div>
+    
+          <div class="boletim">
+               <div class="titulo">
+                    <h2>Boletim do Aluno</h2>
+               </div>
+               <div class="tabela">
+               
+                    <div class="cabecalo_do_boletim">
+                    <p>Matéria</p>
+                    <p>Notas</p>
+                    <p>Presença</p>
+                    </div>
+                    <!-- Matemática -->
+                    <div class="materia">
+                         <p>Matemática</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_matematica()" id="matematica_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_matematica()" id="matematica_presenca" >
+                    </div>
+                    <!-- Português -->
+                    <div class="materia">
+                         <p>Português</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_portugues()" id="portugues_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_portugues()" id="portugues_presenca">
+                    </div>
+                    <!-- Informática -->
+                    <div class="materia">
+                         <p>Informática</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_informatica()" id="informatica_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_informatica()" id="informatica_presenca">
+                    </div>
+                    <!-- Geografia -->
+                    <div class="materia">
+                         <p>Geografia</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_geografia()" id="geografia_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_geografia()" id="geografia_presenca">
+                    </div>
+                    <!-- Inglês -->
+                    <div class="materia">
+                         <p>Inglês</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_ingles()" id="ingles_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_ingles()" id="ingles_presenca">
+                    </div>
+                    <!-- História -->
+                    <div class="materia">
+                         <p>História</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_historia()" id="historia_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_historia()" id="historia_presenca">
+                    </div>
+                    <!-- Filosofia -->
+                    <div class="materia">
+                         <p>Filosofia</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_filosofia()" id="filosofia_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_filosofia()" id="filosofia_presenca">
+                    </div>
+                    <!-- Sociologia -->
+                    <div class="materia">
+                         <p>Sociologia</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_sociologia()" id="sociologia_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_sociologia()" id="sociologia_presenca">
+                    </div>
+                    <!-- Literatura -->
+                    <div class="materia">
+                         <p>Literatura</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_literatura()" id="literatura_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_literatura()" id="literatura_presenca">
+                    </div>
+                    <!-- Educação Fisica -->
+                    <div class="materia">
+                         <p>Educação Fisica</p>
+                         <input type="number" value="0" min="0" max="10" ma oninput="calcular_nota_media_de_ed_fisica()" id="ed_fisica_nota">
+                         <input type="number" value="0" max="50" oninput="calcular_presenca_media_de_ed_fisica()" id="ed_fisica_presenca">
+                    </div>
+               </div>
+          </div>  
+          <aside class="aside">
+               <div class="aside_medias">
+                    <header class="titulo_aside"><strong>Médias do Aluno</strong></header>
+                    <span id="aside"> <p>Nota</p> <p>Presença</p></span>
+                    
+                    <!-- Matemática -->
+                    <div class="media_materia">
+                         <p>Matemática</p>
+                         <label for="" unit="%"><input type="text" id="matematica_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="matematica_media_presenca" value="0" readonly></label>
+                    </div>
+                    
+                    <!-- Português -->
+                    <div class="media_materia">
+                         <p>Português</p>
+                         <label for="" unit="%"><input type="text" id="portugues_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="portugues_media_presenca" value="0" readonly></label>
+                    </div>
+                    
+                    <!-- Informática -->
+                    <div class="media_materia">
+                         <p>Informática</p>
+                         <label for="" unit="%"><input type="text" id="informatica_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="informatica_media_presenca" value="0" readonly></label>
+                    </div>
+                    
+                    <!-- Geografia -->
+                    <div class="media_materia">
+                         <p>Geografia</p>
+                         <label for="" unit="%"><input type="text" id="geografia_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="geografia_media_presenca" value="0" readonly></label>
+                    </div>
+                    
+                    <!-- Inglês -->
+                    <div class="media_materia">
+                         <p>Inglês</p>
+                         <label for="" unit="%"><input type="text" id="ingles_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text"a id="ingles_media_presenca" value="0" readonly></label>
+                    </div>
+                    
+                    <!-- História -->
+                    <div class="media_materia">
+                         <p>História</p>
+                         <label for="" unit="%"><input type="text" id="historia_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="historia_media_presenca" value="0" readonly></label>
+                    </div>
+                    
+                    <!-- Filosofia -->
+                    <div class="media_materia">
+                         <p>Filosofia</p>
+                         <label for="" unit="%"><input type="text" id="filosofia_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="filosofia_media_presenca" value="0" readonly></label>
+                    </div>
+                    
+                    <!-- Sociologia -->
+                    <div class="media_materia">
+                         <p>Sociologia</p>
+                         <label for="" unit="%"><input type="text" id="sociologia_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="sociologia_media_presenca" value="0" readonly></label>
+                    </div>
+                    
+                    <!-- Literatura -->
+                    <div class="media_materia">
+                         <p>Literatura</p>
+                         <label for="" unit="%"><input type="text" id="literatura_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="literatura_media_presenca" value="0" readonly> </label>
+                    </div>
+                    
+                    <!-- Educação Fisica -->
+                    <div class="media_materia">
+                         <p>Educação Fisica</p>
+                         <label for="" unit="%"><input type="text" id="ed_fisica_media_nota" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="ed_fisica_media_presenca" value="0" readonly></label>
+                    </div>
+                    <!-- Média do aluno -->
+                    <div id="media_do_aluno">
+                         <p>Média do Aluno</p>
+                         <label for="" unit="%"><input type="text" id="media_nota" value="0" value="0" readonly></label>
+                         <label for="" unit="%"><input type="text" id="media_presenca" value="0" readonly></label>
+                    </div>
+               </div>
+               <button type="submit" id="button" onclick="avaliar_aluno()">AVALIAR</button>
+          </aside>
+                
+     </div>
+</body>
+</html>
