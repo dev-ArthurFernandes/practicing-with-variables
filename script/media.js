@@ -495,7 +495,7 @@ function avaliar_aluno(){
 
     let media_de_presenca_do_aluno = presenca_do_aluno / 50
 
-    if(media_do_aluno > 80 && presenca_do_aluno > 80){
+    if(media_do_aluno > 80 && media_de_presenca_do_aluno > 80){
         alert(`A nota do aluno ${nome_do_aluno} é de ${media_do_aluno}% e sua presença é ${media_de_presenca_do_aluno}%: Aluno Aprovado!`)
     }
     else{
